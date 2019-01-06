@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BCPA_OTS.Models
 {
     /// <summary>
-    /// William Foster
+    /// Author: William Foster
     /// </summary>
     public class Show
     {

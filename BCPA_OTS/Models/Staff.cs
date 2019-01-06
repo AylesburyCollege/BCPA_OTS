@@ -1,17 +1,64 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BCPA_OTS.Models
 {
+    /// <summary>
+    /// Author: 
+    /// </summary>
+
+    public enum DepartmentOptions
+    {
+        [Display(Name = "Sales")]
+        SALES,
+        [Display(Name = "Marketing")]
+        MARKETING,
+        [Display(Name = "Managerment")]
+        MANAGEMENT
+    }
+
+    public enum JobPositionOptions
+    {
+        [Display(Name = "Sales Assisstant")]
+        SALES_ASSISSTANT,
+        [Display(Name = "Sales Manager")]
+        SALES_MANAGER,
+        [Display(Name = "Head of Marketing")]
+        HEAD_OF_MARKETING,
+        [Display(Name = "Marketing Assisstant")]
+        MARKETING_ASSISSTANT,
+        [Display(Name = "Head Manager")]
+        HEAD_MANAGER,
+        [Display(Name = "Deputy Manager")]
+        DEPUTY_MANAGER
+    }
+
     public class Staff
     {
+        /// <summary>
+        /// A specific identification number that can 
+        /// identify the member of staff within a database.
+        /// </summary>
         [ForeignKey("Person")]
         public int StaffID { get; set; }
 
-        public string JobRole { get; set; }
+        /// <summary>
+        /// The department that the member of staff works for e.g.
+        /// sales, marketing and management.
+        /// </summary>
+        public DepartmentOptions Department { get; set; }
 
-        public string Department { get; set; }
+        /// <summary>
+        /// The specific position that the member of staff holds within 
+        /// their department, e.g. sales assisstant or marketer.
+        /// </summary>
+        [Display(Name = "Job Role")]
+        public JobPositionOptions JobRole { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Person Person { get; set; }
 
     }
