@@ -31,7 +31,7 @@ namespace BCPA_OTS.Models
         [Required, StringLength(3), Display(Name = "Security Code")]
         public string SecurityNumber { get; set; }
 
-        private Person Person;
+       //private Person Person;
 
     }
 }

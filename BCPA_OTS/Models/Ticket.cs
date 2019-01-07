@@ -40,6 +40,10 @@ namespace BCPA_OTS.Models
         
         public string SeatID { get; set; }
 
+        public string EventID { get; set; }
+
+        public string AgentID { get; set; }
+
         /// <summary>
         /// Refers to the act of the customer 
         /// purchasing a ticket.

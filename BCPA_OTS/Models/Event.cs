@@ -5,6 +5,11 @@ namespace BCPA_OTS.Models
 {
     /// <summary>
     /// Author: William Foster
+    /// 
+    /// Assumption: Events do not have an interval as the 
+    /// attendees can attend or leave whenever they wish.
+    /// Additionally, I am assuming that all shows will 
+    /// have an interval of up to minutes.
     /// </summary>
     public class Event
     {
@@ -14,18 +19,34 @@ namespace BCPA_OTS.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The starting date and time of the event, displayed in
-        /// a 24 hour clock format e.g. 24/09/2019 at 19:00.
+        /// The starting time of the event, displayed in
+        /// a 24 hour clock format e.g. 19:00.
         /// </summary>
-        [Required, DataType(DataType.DateTime), Display(Name="Date of Event")]
-        public DateTime StartDateTime { get; set; }
+        [Required, DataType(DataType.DateTime), Display(Name= "Starting Time")]
+        public DateTime StartTime { get; set; }
+
+        /// <summary>
+        /// The ending time of the event, displayed in 
+        /// a 24 hour clock format e.g. 22:00
+        /// </summary>
+        [DataType(DataType.DateTime), Display(Name = "Finishing Time")]
+        public DateTime EndTime { get; set; }
+
+        /// <summary>
+        /// In the case of a show, this is a space of time 
+        /// where the performance will pause for the audience 
+        /// to have a break. 
+        /// </summary>
+        [Range(15, 30), DataType(DataType.Time)]
+        public DateTime Interval { get; set; }
 
         /// <summary>
         ///  A measure of the duration of the event, 
-        ///  measured in hours and minutes.
+        ///  measured in hours and minutes, counting
+        ///  an interval time e.g. 2:30.
         /// </summary>
         [Required, DataType(DataType.DateTime)]
-        public DateTime Duration { get; set; }
+        public DateTime EventDuration { get; set; }
 
         /// <summary>
         /// The URL of the image being used in the event's 
