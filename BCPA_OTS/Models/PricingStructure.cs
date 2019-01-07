@@ -3,6 +3,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BCPA_OTS.Models
 {
+    public enum TicketOptions
+    {
+        [Display(Name = "Adult")]
+        ADULT,
+        [Display(Name = "Student")]
+        STUDENT,
+        [Display(Name = "Child")]
+        CHILD,
+        [Display(Name = "Senior")]
+        SENIOR,
+    }
+
     public class PricingStructure
     {
         /// <summary>
@@ -13,30 +25,8 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// The ticket price for an adult.
         /// </summary>
-        [Required, DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Adult Ticket Price")]
-        public decimal AdultTicketPrice { get; set; }
-
-        /// <summary>
-        /// The ticket price for a student.
-        /// </summary>
-        [Required, DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Student Ticket Price")]
-        public decimal StudentTicketPrice { get; set; }
-
-        /// <summary>
-        /// The ticket price for a child
-        /// </summary>
-        [Required, DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Child Ticket Price")]
-        public decimal ChildTicketPrice { get; set; }
-
-        /// <summary>
-        /// The ticket price for a senior citizen
-        /// </summary>
-        [Required, DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Senior Ticket Price")]
-        public decimal SeniorTicketPrice { get; set; }
+        [Display(Name = "Ticket Options")]
+        public TicketOptions Ticket { get; set; }
 
         //private Event Event;
 
