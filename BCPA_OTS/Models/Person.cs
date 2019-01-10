@@ -77,7 +77,7 @@ namespace BCPA_OTS.Models
 
         public virtual Address Address { get; set; }
 
-        public virtual PaymentCard PaymentCard { get; set; }
+        public virtual PaymentCard2 PaymentCard { get; set; }
 
         //public virtual Purchase[] Purchases;
         //public virtual Staff staff;

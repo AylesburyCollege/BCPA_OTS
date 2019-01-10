@@ -1,9 +1,13 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
 namespace BCPA_OTS.Models
 {
+
     public enum CardTypes
     {
         [Display(Name = "Visa Credit Card")]
@@ -16,9 +20,8 @@ namespace BCPA_OTS.Models
         PAYPAL
     }
 
-    public class PaymentCard
+    public class PaymentCard2
     {
-    
         [ForeignKey("Person")]
         public int PaymentCardID { get; set; }
 
@@ -38,7 +41,7 @@ namespace BCPA_OTS.Models
         /// The expiry date of the credit card, displayed beside 
         /// the start date. The expiry date is formatted as mm/yy/
         /// </summary>
-        [Range(1,12), Required]
+        [Range(1, 12), Required]
         public int ExpiryMonth { get; set; }
 
         [Range(2019, 2025), Required]
@@ -52,6 +55,5 @@ namespace BCPA_OTS.Models
         public string SecurityNumber { get; set; }
 
         public virtual Person Person { get; set; }
-
     }
 }
