@@ -26,18 +26,120 @@ namespace BCPA_OTS.Migrations
             SeedPeople(context);
 
             SeedPaymentCard(context);
+
+            SeedAddresses(context);
+        }
+
+        private void SeedAddresses(OTS_Context context)
+        {
+            var addressList = new List<Address>
+            {
+                new Address
+                {
+                    AddressID = 1,
+                    House = "8",
+                    Street = "Kestrel Way",
+                    Town = "Aylesbury",
+                    Postcode = "HP190GH",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 2,
+                    House = "22",
+                    Street = "Iron Road",
+                    Town = "Aylesbury",
+                    Postcode = "HP208UG",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 3,
+                    House = "12",
+                    Street = "Mercia Close",
+                    Town = "Aylesbury",
+                    Postcode = "HP214OF",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 4,
+                    House = "43",
+                    Street = "Potters Way",
+                    Town = "Chesham",
+                    Postcode = "HP236LV",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 5,
+                    House = "18",
+                    Street = "Victory Way",
+                    Town = "Oxford",
+                    Postcode = "OX181LT",
+                    County = Counties.OXFORDSHIRE
+                },
+                new Address
+                {
+                    AddressID = 6,
+                    House = "Forresters Cottage",
+                    Street = "Woodland Road",
+                    Town = "Cloverfield",
+                    Postcode = "HP38UK",
+                    County = Counties.HERTFORDSHIRE
+                },
+                new Address
+                {
+                    AddressID = 7,
+                    House = "11",
+                    Street = "Gediminas Road",
+                    Town = "Camden",
+                    Postcode = "NW35VI",
+                    County = Counties.LONDON
+                },
+                new Address
+                {
+                    AddressID = 8,
+                    House = "Old Station House",
+                    Street = "Cane Row",
+                    Town = "Smith's Hearth",
+                    Postcode = "OX217ME",
+                    County = Counties.OXFORDSHIRE
+                },
+                new Address
+                {
+                    AddressID = 9,
+                    House = "26",
+                    Street = "Brunel Avenue",
+                    Town = "Gospel Oak",
+                    Postcode = "NW42AQ",
+                    County = Counties.LONDON
+                },
+                new Address
+                {
+                    AddressID = 10,
+                    House = "14",
+                    Street = "Roses Close",
+                    Town = "Towton",
+                    Postcode = "AL4 E61",
+                    County = Counties.BEDFORDSHIRE
+                }
+            };
+
+            addressList.ForEach(s => context.Addresses.AddOrUpdate(p => p.AddressID, s));
+            context.SaveChanges();
         }
 
         private void SeedPaymentCard(OTS_Context context)
         {
-            var PaymentCardList = new List<PaymentCard2>
+            var PaymentCardList = new List<Models.PaymentCard>
             {
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 1,
                     HolderName = "William Foster",
@@ -48,7 +150,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "123"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 2,
                     HolderName = "Connor Patey",
@@ -59,7 +161,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "414"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 3,
                     HolderName = "Daniel Schafer-Smith",
@@ -70,7 +172,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "641"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 4,
                     HolderName = "Zeeshan Akhlaq",
@@ -81,7 +183,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "871"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 5,
                     HolderName = "Tomas Green",
@@ -92,7 +194,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "661"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 6,
                     HolderName = "Ben Miller",
@@ -103,7 +205,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "432"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 7,
                     HolderName = "Lilly Erikson",
@@ -114,7 +216,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "313"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 8,
                     HolderName = "Joshua Knight",
@@ -125,7 +227,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "983"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 9,
                     HolderName = "Emily White",
@@ -136,7 +238,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "701"
                 },
 
-                new PaymentCard2
+                new Models.PaymentCard
                 {
                     PaymentCardID = 10,
                     HolderName = "Eliot Myers",

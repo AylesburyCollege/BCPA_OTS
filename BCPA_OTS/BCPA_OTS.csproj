@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201901101420471_PaymentCard.Designer.cs">
       <DependentUpon>201901101420471_PaymentCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901101449421_CardNumber.cs" />
+    <Compile Include="Migrations\201901101449421_CardNumber.Designer.cs">
+      <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -221,7 +225,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PaymentCard2.cs" />
+    <Compile Include="Models\PaymentCard.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PricingStructure.cs" />
     <Compile Include="Models\Purchase.cs" />
@@ -320,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101420471_PaymentCard.resx">
       <DependentUpon>201901101420471_PaymentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101449421_CardNumber.resx">
+      <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

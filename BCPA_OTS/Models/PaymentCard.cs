@@ -20,7 +20,7 @@ namespace BCPA_OTS.Models
         PAYPAL
     }
 
-    public class PaymentCard2
+    public class PaymentCard
     {
         [ForeignKey("Person")]
         public int PaymentCardID { get; set; }
@@ -34,7 +34,7 @@ namespace BCPA_OTS.Models
         /// The 16 digits on the front of the card, displayed
         /// above the start and expiry date.
         /// </summary>
-        [Required, StringLength(16), Display(Name = "Card Number")]
+        [Required, StringLength(20), Display(Name = "Card Number")]
         public string CardNumber { get; set; }
 
         /// <summary>
