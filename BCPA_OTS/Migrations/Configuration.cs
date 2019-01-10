@@ -1,6 +1,7 @@
 namespace BCPA_OTS.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -29,9 +30,14 @@ namespace BCPA_OTS.Migrations
 
         private void SeedPaymentCard(OTS_Context context)
         {
-            var PaymentCardList = new List<PaymentCard>
+            var PaymentCardList = new List<PaymentCard2>
             {
-                new PaymentCard
+                new PaymentCard2
+                {
+                    
+                },
+
+                new PaymentCard2
                 {
                     PaymentCardID = 1,
                     HolderName = "William Foster",
@@ -42,7 +48,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "123"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 2,
                     HolderName = "Connor Patey",
@@ -53,7 +59,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "414"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 3,
                     HolderName = "Daniel Schafer-Smith",
@@ -64,7 +70,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "641"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 4,
                     HolderName = "Zeeshan Akhlaq",
@@ -75,7 +81,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "871"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 5,
                     HolderName = "Tomas Green",
@@ -86,7 +92,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "661"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 6,
                     HolderName = "Ben Miller",
@@ -97,7 +103,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "432"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 7,
                     HolderName = "Lilly Erikson",
@@ -108,7 +114,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "313"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 8,
                     HolderName = "Joshua Knight",
@@ -119,7 +125,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "983"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 9,
                     HolderName = "Emily White",
@@ -130,7 +136,7 @@ namespace BCPA_OTS.Migrations
                     SecurityNumber = "701"
                 },
 
-                new PaymentCard
+                new PaymentCard2
                 {
                     PaymentCardID = 10,
                     HolderName = "Eliot Myers",

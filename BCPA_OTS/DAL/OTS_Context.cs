@@ -17,10 +17,11 @@ namespace BCPA_OTS.DAL
 
         public DbSet<Ticket> Tickets { get; set; }
 
-        public DbSet<PaymentCard> PaymentCards { get; set; }
+        public DbSet<PaymentCard2> PaymentCards { get; set; }
 
         public DbSet<Purchase> Purchases { get; set; }
 
-        public System.Data.Entity.DbSet<BCPA_OTS.Models.Address> Addresses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+
     }
 }
