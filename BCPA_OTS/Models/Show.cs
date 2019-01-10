@@ -38,7 +38,9 @@ namespace BCPA_OTS.Models
         [Required, StringLength(255), DataType(DataType.Url), Display(Name ="Video")]
         public string VideoURL { get; set; }
 
-        public virtual ICollection<Artist> Artists { get; set; }
+       
+
+        public virtual ICollection<Seat> Seats { get; set; }
 
     }
 }

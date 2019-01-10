@@ -204,13 +204,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901101404145_InitialCreate.cs" />
-    <Compile Include="Migrations\201901101404145_InitialCreate.Designer.cs">
-      <DependentUpon>201901101404145_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901101420471_PaymentCard.cs" />
-    <Compile Include="Migrations\201901101420471_PaymentCard.Designer.cs">
-      <DependentUpon>201901101420471_PaymentCard.cs</DependentUpon>
+    <Compile Include="Migrations\201901101407309_InitialCreate.cs" />
+    <Compile Include="Migrations\201901101407309_InitialCreate.Designer.cs">
+      <DependentUpon>201901101407309_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201901101449421_CardNumber.cs" />
     <Compile Include="Migrations\201901101449421_CardNumber.Designer.cs">
@@ -319,11 +315,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901101404145_InitialCreate.resx">
-      <DependentUpon>201901101404145_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901101420471_PaymentCard.resx">
-      <DependentUpon>201901101420471_PaymentCard.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901101407309_InitialCreate.resx">
+      <DependentUpon>201901101407309_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101449421_CardNumber.resx">
       <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>

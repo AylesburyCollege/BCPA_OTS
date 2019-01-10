@@ -23,7 +23,8 @@ namespace BCPA_OTS.Models
         public int PricingStructureID { get; set; }
 
         /// <summary>
-        /// The ticket price for an adult.
+        /// The various ticket options for customers, depending 
+        /// on their age or circumstance.
         /// </summary>
         [Display(Name = "Ticket Options")]
         public TicketOptions Ticket { get; set; }

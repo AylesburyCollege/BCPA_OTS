@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BCPA_OTS.Models
@@ -15,6 +16,10 @@ namespace BCPA_OTS.Models
     {
         public int EventID { get; set; }
 
+        /// <summary>
+        /// The displayed name of the event, present on the 
+        /// events list.
+        /// </summary>
         [Required, StringLength(30)]
         public string Name { get; set; }
 
@@ -46,7 +51,7 @@ namespace BCPA_OTS.Models
         ///  an interval time e.g. 2:30.
         /// </summary>
         [Required, DataType(DataType.DateTime)]
-        public DateTime EventDuration { get; set; }
+        public DateTime Duration { get; set; }
 
         /// <summary>
         /// The URL of the image being used in the event's 
@@ -78,11 +83,11 @@ namespace BCPA_OTS.Models
         /// </summary>
         public bool IsShow { get; set; }
 
+        public virtual ICollection<Artist> Artists { get; set; }
+
         private Ticket[] tickets;
 
         //private PricingStructure PricingStructure;
-
-        private Artist[] Artists;
 
     }
 }
