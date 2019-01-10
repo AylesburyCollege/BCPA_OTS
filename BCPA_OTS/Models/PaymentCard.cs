@@ -4,11 +4,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BCPA_OTS.Models
 {
+    public enum CardTypes
+    {
+        [Display(Name = "Visa Credit Card")]
+        VISA_CREDIT,
+        [Display(Name = "Visa Debit Card")]
+        VISA_DEBIT,
+        [Display(Name = "MasterCard")]
+        MASTERCARD,
+        [Display(Name = "PayPal")]
+        PAYPAL
+    }
+
     public class PaymentCard
     {
     
         [ForeignKey("Person")]
         public int PaymentCardID { get; set; }
+
+        public CardTypes CardType { get; set; }
 
         [StringLength(20), Required]
         public string HolderName { get; set; }
