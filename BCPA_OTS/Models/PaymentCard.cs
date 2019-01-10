@@ -18,7 +18,7 @@ namespace BCPA_OTS.Models
         /// above the start and expiry date.
         /// </summary>
         [Required, StringLength(16), Display(Name = "Card Number")]
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
         /// <summary>
         /// The expiry date of the credit card, displayed beside 
@@ -37,7 +37,7 @@ namespace BCPA_OTS.Models
         [Required, StringLength(3), Display(Name = "Security Code")]
         public string SecurityNumber { get; set; }
 
-       //private Person Person;
+        public virtual Person Person { get; set; }
 
     }
 }
