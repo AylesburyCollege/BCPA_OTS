@@ -10,7 +10,6 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// A unique number to identify each purchase.
         /// </summary>
-        [ForeignKey("Person")]
         public int PurchaseID { get; set; }
 
         /// <summary>

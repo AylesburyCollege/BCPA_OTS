@@ -15,7 +15,7 @@ namespace BCPA_OTS.Models
         public int TicketID { get; set; }
 
         /// <summary>
-        /// The date of purchase for a ticke.
+        /// The date of purchase for a ticket.
         /// </summary>
         [Required, DataType(DataType.DateTime), Display(Name="Purchase Date")]
         public DateTime PurchaseDate { get; set; }
@@ -24,13 +24,10 @@ namespace BCPA_OTS.Models
         /// A true or false statement to identify
         /// whether the event is classed as an event.
         /// </summary>
+        ///
         public bool Event { get; set; }
 
-        /// <summary>
-        /// A second true or false statement 
-        /// whether the event is classed as a show.
-        /// </summary>
-        public bool Show { get; set; }
+        
 
         /// <summary>
         /// The cost of a single ticket.
@@ -38,11 +35,11 @@ namespace BCPA_OTS.Models
         [Required, DisplayFormat(DataFormatString ="{0:c}", ApplyFormatInEditMode = true)]
         public decimal Price { get; set; }
         
-        public string SeatID { get; set; }
+        public int SeatID { get; set; }
 
-        public string EventID { get; set; }
+        public int ShowID { get; set; }
 
-        public string AgentID { get; set; }
+        
 
         /// <summary>
         /// Refers to the act of the customer 
@@ -53,11 +50,14 @@ namespace BCPA_OTS.Models
             throw new System.Exception("Not implemented");
         }
 
-        public virtual Seat seat { get; set; }
+        public virtual Seat Seat { get; set; }
 
-        //private Agent agent;
+        public virtual Show Show { get; set; }
 
-        //private Event event;
+
+        
+
+        
 
         //private Purchase  Purchase;
 
