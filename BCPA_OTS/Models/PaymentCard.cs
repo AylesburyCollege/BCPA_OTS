@@ -6,8 +6,12 @@ namespace BCPA_OTS.Models
 {
     public class PaymentCard
     {
+    
         [ForeignKey("Person")]
         public int PaymentCardID { get; set; }
+
+        [StringLength(20), Required]
+        public string HolderName { get; set; }
 
         /// <summary>
         /// The 16 digits on the front of the card, displayed
@@ -20,9 +24,11 @@ namespace BCPA_OTS.Models
         /// The expiry date of the credit card, displayed beside 
         /// the start date. The expiry date is formatted as mm/yy/
         /// </summary>
-        [Required, DataType(DataType.Date), Display(Name = "Date of Expiry")]
-        [DisplayFormat(DataFormatString="{0:MM/yy}", ApplyFormatInEditMode = true)]
-        public DateTime ExpiryDate { get; set; }
+        [Range(1,12), Required]
+        public int ExpiryMonth { get; set; }
+
+        [Range(2019, 2025), Required]
+        public int ExpiryYear { get; set; }
 
         /// <summary>
         /// The 3 digits on the back of the card, viewable on
