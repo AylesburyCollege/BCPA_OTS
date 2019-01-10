@@ -10,10 +10,16 @@ namespace BCPA_OTS.Models
     {
         /// <summary>
         /// An identification number assigned to 
-        /// each seat that combines its seat and row 
-        /// number.
+        /// each seat.
         /// </summary>
-        public string SeatID { get; set; }
+        public int SeatID { get; set; }
+
+        /// <summary>
+        /// A letter assigned to each row. The seat
+        /// number followed by the row letter informs 
+        /// the customer of their specific seat.
+        /// </summary>
+        public string RowLetter { get; set; }
 
         /// <summary>
         /// A specification of seat that each one will 
