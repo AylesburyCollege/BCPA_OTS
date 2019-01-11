@@ -204,19 +204,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901101407309_InitialCreate.cs" />
-    <Compile Include="Migrations\201901101407309_InitialCreate.Designer.cs">
-      <DependentUpon>201901101407309_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901101449421_CardNumber.cs" />
-    <Compile Include="Migrations\201901101449421_CardNumber.Designer.cs">
-      <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901101920481_NewChanges.cs" />
-    <Compile Include="Migrations\201901101920481_NewChanges.Designer.cs">
-      <DependentUpon>201901101920481_NewChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Agent.cs" />
@@ -316,17 +303,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901101407309_InitialCreate.resx">
-      <DependentUpon>201901101407309_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901101449421_CardNumber.resx">
-      <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901101920481_NewChanges.resx">
-      <DependentUpon>201901101920481_NewChanges.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

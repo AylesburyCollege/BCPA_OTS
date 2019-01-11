@@ -38,7 +38,7 @@ namespace BCPA_OTS.Models
         /// have. The types are: Orchestra, Stall and 
         /// Back seat.
         /// </summary>
-        [Required, StringLength(10), Display(Name ="Seat Type")]
+        [Required, Display(Name ="Seat Type")]
         public SeatTypes Type { get; set; }
 
         /// <summary>

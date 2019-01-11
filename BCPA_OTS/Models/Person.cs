@@ -15,6 +15,7 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// A unique number used to identify customers.
         /// </summary>
+        [Key]
         public int PersonID { get; set; }
 
         /// <summary>

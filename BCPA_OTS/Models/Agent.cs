@@ -26,6 +26,7 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// A unique ID number given to each agent so 
         /// </summary>
+        [Key]
         [ForeignKey("Person")]
         public int AgentID { get; set; }
 
