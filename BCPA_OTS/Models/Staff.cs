@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BCPA_OTS.Models
 {
     /// <summary>
-    /// Author: 
+    /// Author: Zeeshan
     /// </summary>
 
     public enum DepartmentOptions
@@ -14,7 +14,7 @@ namespace BCPA_OTS.Models
         SALES,
         [Display(Name = "Marketing")]
         MARKETING,
-        [Display(Name = "Managerment")]
+        [Display(Name = "Management")]
         MANAGEMENT
     }
 
@@ -55,6 +55,8 @@ namespace BCPA_OTS.Models
         /// </summary>
         [Display(Name = "Job Role")]
         public JobPositionOptions JobRole { get; set; }
+
+        public decimal Salary { get; set; }
 
         /// <summary>
         /// 

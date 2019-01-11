@@ -12,35 +12,21 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// 
         /// </summary>
-        public string VenueID { get; set; }
+        public static string Name = "Bucks Center";
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string Location = "Aylesbury";
 
         /// <summary>
         /// 
         /// </summary>
-        public string Location { get; set; }
+        public static DateTime OpeningTime = new DateTime(2019, 1, 1, 10, 0, 0);
 
         /// <summary>
         /// 
         /// </summary>
-        public int OpeningTime { get; set; }
+        public static DateTime ClosingTime = new DateTime(2019, 1, 1, 20, 30, 0);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public int ClosingTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Name { get; set; }
-
-        //private Ticket ticket;
-
-        //private Event event;
-
-        //private Seat seat;
-
-        //private Manager manager;
-
-    }
+     }
 }

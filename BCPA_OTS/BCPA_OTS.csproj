@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201901101449421_CardNumber.Designer.cs">
       <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901101920481_NewChanges.cs" />
+    <Compile Include="Migrations\201901101920481_NewChanges.Designer.cs">
+      <DependentUpon>201901101920481_NewChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -223,12 +227,11 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PaymentCard.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\PricingStructure.cs" />
+    <Compile Include="Models\Promotion.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\Seat.cs" />
     <Compile Include="Models\Show.cs" />
     <Compile Include="Models\Staff.cs" />
-    <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -320,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101449421_CardNumber.resx">
       <DependentUpon>201901101449421_CardNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101920481_NewChanges.resx">
+      <DependentUpon>201901101920481_NewChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

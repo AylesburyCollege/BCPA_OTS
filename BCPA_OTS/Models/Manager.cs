@@ -15,11 +15,6 @@ namespace BCPA_OTS.Models
         public int ManagerID { get; set; }
 
         /// <summary>
-        /// The unique number 
-        /// </summary>
-        public int VenueID { get; set; }
-
-        /// <summary>
         /// A process the manager can start to cancel a show. 
         /// A show may need to be cancelled due to elements out 
         /// of the manager's and production team's contorol.
@@ -69,7 +64,6 @@ namespace BCPA_OTS.Models
             throw new System.Exception("Not implemented");
         }
 
-        private Venue venue;
 
     }
 }

@@ -7,7 +7,7 @@ namespace BCPA_OTS.Models
     /// <summary>
     /// The agent is responsible for selling tickets for specific seats.
     /// 
-    /// Author: 
+    /// Author: Daniel
     /// 
     /// Assumption: An agent is an individual working for an entertainment 
     /// company, selling tickets. They will work in a location different 
@@ -15,7 +15,8 @@ namespace BCPA_OTS.Models
     /// tickets to customers who come to their business.
     /// 
     /// Assumption: A ticket range applies to a set of seats for 
-    /// a specific date range, not for specific shows.
+    /// a specific date range, not for specific shows. This range
+    /// will be defined by a continuous set of seat rows (A:Z, 1:26)
     /// 
     /// Assumption: A date range will be assigned following a monthly 
     /// structure e.g. an agent will have their seat range for 2 months.
@@ -29,20 +30,38 @@ namespace BCPA_OTS.Models
         public int AgentID { get; set; }
 
         /// <summary>
-        /// The seat range assigned to the agent, outlining the 
-        /// range of seats they can sell as an agent.
+        /// The first row this agent can sell for shows during the
+        /// period of the contract
         /// </summary>
-        [Range(1,50)]
-        public int SeatRange { get; set; }
+        [Range(1,20)]
+        public int StartRow { get; set; }
 
         /// <summary>
-        /// This refers to the date range given to the agent, 
-        /// to sell thier assinged ticket range. 
+        /// The last row this agent can sell for shows during the
+        /// period of the contract
         /// </summary>
-        [Range(1, 3)]
-        public DateTime DateRange { get; set; }
+        [Range(1, 20)]
+        public int EndRow { get; set; }
 
-        public Ticket[] tickets;
+        /// <summary>
+        /// This is the first date that the agent can sell
+        /// selected seats to shows at the venue
+        /// </summary>
+        [DataType(DataType.Date)]
+         public DateTime ContractStartDate { get; set; }
 
+        /// <summary>
+        /// This is the first date that the agent can sell
+        /// selected seats to shows at the venue
+        /// </summary>
+        [DataType(DataType.Date)]
+        public DateTime ContractEndDate { get; set; }
+
+        [Range(1, 100)]
+        public int Comission { get; set; }
+
+        // Navigation Properties
+
+        public virtual Person Person { get; set; }
     }
 }

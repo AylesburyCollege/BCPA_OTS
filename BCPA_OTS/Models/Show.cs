@@ -16,29 +16,34 @@ namespace BCPA_OTS.Models
         public int ShowID { get; set; }
 
         /// <summary>
-        /// A short description of the show and its
-        /// contents.
+        /// The starting time of the event, displayed in
+        /// a 24 hour clock format e.g. 19:00.
         /// </summary>
-        [Required, StringLength(500)]
-        public string Description { get; set; }
+        [Required, DataType(DataType.DateTime), Display(Name = "Starting Time")]
+        public DateTime StartDateTime { get; set; }
 
         /// <summary>
-        /// The Uniform Resource Locator (URL) of the
-        /// image being used in the show's decrption,
-        /// i.e. an image relevant to a specific show.
+        /// The ending time of the event, displayed in 
+        /// a 24 hour clock format e.g. 22:00
         /// </summary>
-        [Required, StringLength(255), DataType(DataType.ImageUrl), Display(Name ="Image")]
-        public string ImageURL { get; set; }
+        [DataType(DataType.DateTime), Display(Name = "Finishing Time")]
+        public DateTime EndDateTime { get; set; }
 
         /// <summary>
-        /// The URL of the video being used in the show's 
-        /// description e.g. a trailer for the show with 
-        /// preview viewing from various venues.
+        /// In the case of a show, this is time of a 20 minute interval 
+        /// where the performance will pause for the audience to have a break. 
         /// </summary>
-        [Required, StringLength(255), DataType(DataType.Url), Display(Name ="Video")]
-        public string VideoURL { get; set; }
+        [DataType(DataType.Time)]
+        public DateTime IntervalTime { get; set; }
 
-       
+        // Events are shows that only occur once, and tickets cannot
+        // be purchased online.  They are bought at the door
+        public bool HasTickets { get; set; }
+
+        // Navigation Properties
+
+        public int PromotionID { get; set; }
+        public Promotion Promotion { get; set; }
 
         public virtual ICollection<Seat> Seats { get; set; }
 

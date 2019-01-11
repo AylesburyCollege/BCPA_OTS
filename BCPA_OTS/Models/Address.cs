@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BCPA_OTS.Models
 {
     /// <summary>
-    /// Author: 
+    /// Author: Zeeshan
     /// </summary>
 
     public enum Counties
@@ -53,7 +53,7 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// Refers to the postcode allocated to the person's address.
         /// </summary>
-        [Required, StringLength(8)]
+        [Required, StringLength(10)]
         public string Postcode { get; set; }
 
         /// <summary>

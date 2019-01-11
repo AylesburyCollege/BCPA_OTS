@@ -23,11 +23,11 @@ namespace BCPA_OTS.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            SeedPeople(context);
+            //SeedPeople(context);
 
-            SeedPaymentCard(context);
+            //SeedPaymentCard(context);
 
-            SeedAddresses(context);
+            //SeedAddresses(context);
         }
 
         private void SeedAddresses(OTS_Context context)

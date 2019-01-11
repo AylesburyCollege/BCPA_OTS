@@ -15,11 +15,7 @@ namespace BCPA_OTS.DAL
 
         public DbSet<Person> People { get; set; }
 
-        public DbSet<Ticket> Tickets { get; set; }
-
         public DbSet<PaymentCard> PaymentCards { get; set; }
-
-        public DbSet<Purchase> Purchases { get; set; }
 
         public DbSet<Address> Addresses { get; set; }
 

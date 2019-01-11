@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BCPA_OTS.Models
@@ -7,7 +8,7 @@ namespace BCPA_OTS.Models
     /// The person who wishes to attend events 
     /// and shows at the venue.
     /// 
-    /// Author: 
+    /// Author: Zeeshan
     /// </summary>
     public class Person
     {
@@ -15,13 +16,6 @@ namespace BCPA_OTS.Models
         /// A unique number used to identify customers.
         /// </summary>
         public int PersonID { get; set; }
-
-        /// <summary>
-        /// This is the unique name the customer has to login
-        /// to the system and access/sell tickets.
-        /// </summary>
-        [Required, StringLength(20)]
-        public string Username { get; set; }
 
         /// <summary>
         /// The first name of any given person.
@@ -36,7 +30,8 @@ namespace BCPA_OTS.Models
         public string LastName { get; set; }
 
         /// <summary>
-        /// The e-mail held by a person by which they can be contacted.
+        /// The e-mail held by a person by which they can be contacted
+        /// and the email address used to register the customer online account.
         /// </summary>
         [Required, StringLength(100), Display(Name = "E-mail Address")]
         public string Email { get; set; }
@@ -44,13 +39,13 @@ namespace BCPA_OTS.Models
         /// <summary>
         /// The phone number of a person, assigned to a home phone.
         /// </summary>
-        [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
+        [StringLength(20), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
         public string HomePhoneNumber { get; set; }
 
         /// <summary>
         /// The phone number of a person, assigned to their mobile phone.
         /// </summary>
-        [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Mobile Phone")]
+        [StringLength(20), DataType(DataType.PhoneNumber), Display(Name = "Mobile Phone")]
         public string MobilePhoneNumber { get; set; }
 
         /// <summary>
@@ -60,7 +55,17 @@ namespace BCPA_OTS.Models
         [DisplayFormat(DataFormatString = "{0:yyyy/mm/dd}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
 
+        // Navigation Properties
+
         public int PaymentCardID { get; set; }
+        public virtual PaymentCard PaymentCard { get; set; }
+
+        public int AddressID { get; set; }
+        public virtual Address Address { get; set; }
+
+        public virtual ICollection<Purchase> Purchases { get; set; }
+
+        // Methods
 
         /// <summary>
         /// Used to register and store the customers information so the 
@@ -75,11 +80,5 @@ namespace BCPA_OTS.Models
             throw new System.Exception("Not implemented");
         }
 
-        public virtual Address Address { get; set; }
-
-        public virtual PaymentCard PaymentCard { get; set; }
-
-        //public virtual Purchase[] Purchases;
-        //public virtual Staff staff;
     }
 }

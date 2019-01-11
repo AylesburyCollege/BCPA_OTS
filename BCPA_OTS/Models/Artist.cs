@@ -9,8 +9,8 @@ namespace BCPA_OTS.Models
 
     public class Artist
     {
-
-        // A unique number assigned to each artist.
+        // A unique name registered for each artist.
+        [StringLength(50)]
         public string ArtistID { get; set; }
 
         /// <summary>
