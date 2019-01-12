@@ -40,6 +40,7 @@ namespace BCPA_OTS.Models
         /// A specific identification number that can 
         /// identify the member of staff within a database.
         /// </summary>
+        [Key]
         [ForeignKey("Person")]
         public int StaffID { get; set; }
 

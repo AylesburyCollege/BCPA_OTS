@@ -13,11 +13,24 @@ namespace BCPA_OTS.DAL
         {
         }
 
+        public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<Artist> Artists { get; set; }
+
+        public DbSet<Agent> Agents { get; set; }
+
+        public DbSet<Event> Events { get; set; }
+
         public DbSet<Person> People { get; set; }
 
         public DbSet<PaymentCard> PaymentCards { get; set; }
 
-        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
 
+        public DbSet<Seat> Seats { get; set; }
+
+        public DbSet<Show> Shows { get; set; }
+
+        public DbSet<Staff> StaffList { get; set; }
     }
 }
