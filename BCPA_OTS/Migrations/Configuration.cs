@@ -4,6 +4,7 @@ namespace BCPA_OTS.Migrations
     using BCPA_OTS.Models;
     using BCPA_OTS.DAL;
     using System.Collections.Generic;
+    using System;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OTS_Context>
     {
@@ -25,6 +26,27 @@ namespace BCPA_OTS.Migrations
             SeedPaymentCard(context);
 
             SeedAddresses(context);
+
+            SeedEvents(context);
+        }
+
+        private void SeedEvents(OTS_Context context)
+        {
+            var eventList = new List<Event>
+            {
+                new Event
+                {
+                    EventID = 1,
+                    Name = "Some Show",
+                    Description = "Some show",
+                    IsShow = true,
+                    ImageURL = "Image.jpg",
+                    VideoURL = "NONE"
+                }
+            };
+
+            eventList.ForEach(s => context.Events.AddOrUpdate(p => p.EventID, s));
+            context.SaveChanges();
         }
 
         private void SeedAddresses(OTS_Context context)

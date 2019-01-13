@@ -46,7 +46,7 @@ namespace BCPA_OTS.Models
 
         /// <summary>
         /// The department that the member of staff works for e.g.
-        /// sales, marketing and management.
+        /// sales, marketing or management.
         /// </summary>
         public DepartmentOptions Department { get; set; }
 
@@ -57,11 +57,11 @@ namespace BCPA_OTS.Models
         [Display(Name = "Job Role")]
         public JobPositionOptions JobRole { get; set; }
 
+        /// <summary>
+        /// The annual amount of money earned by a staff member.
+        /// </summary>
         public decimal Salary { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public Person Person { get; set; }
 
     }
