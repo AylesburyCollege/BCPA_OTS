@@ -5,15 +5,17 @@
 
 <div class="jumbotron">
     <h1>Bucks Centre for the Performing Arts</h1>
-   
+
 </div>
-@foreach(var show in Model)
+@foreach (var show in Model)
 {
     <h2>@show.Name</h2>
     <p>@show.Description</p>
     <a href="~/Home/EventDetails/@show.EventID">
         <img class="img-responsive" src="~/Images/@show.ImageURL" alt="Image of Show" />
     </a>
+
+
 
 
 }

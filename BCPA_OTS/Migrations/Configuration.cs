@@ -37,12 +37,89 @@ namespace BCPA_OTS.Migrations
                 new Event
                 {
                     EventID = 1,
-                    Name = "Some Show",
-                    Description = "Some show",
+                    Name = "Bang Said the Gun",
+                    Description = "Poetry for people who don't like poetry, " +
+                    "it’s loud, raucous, political, trivial, serious and very funny.",
                     IsShow = true,
-                    ImageURL = "Image.jpg",
+                    ImageURL = "Bang.jpg",
                     VideoURL = "NONE"
-                }
+                },
+                new Event
+                {
+                    EventID = 2,
+                    Name = "Swan Lake",
+                    Description = "The Moscow City Ballet tours to" +
+                    "present stunning Swan Lake, in classic Russian" +
+                    "and a full orchestra.",
+                    IsShow = true,
+                    ImageURL = "SwanLake.jpg",
+                    VideoURL = "NONE",
+                },
+                new Event
+                {
+                    EventID = 3,
+                    Name = "Frank Turner and The Sleeping Souls",
+                    Description = "Over 1000 shows since the inception " +
+                    "of the Sleeping Souls, Frank Turner brings his brand " +
+                    "of punk-infused folk music to the BCPA.",
+                    IsShow = true,
+                    ImageURL = "FrankTurner.jpg",
+                    VideoURL = "NONE"
+                },
+                new Event
+                {
+                    EventID = 4,
+                    Name = "All Day IT Careers Networking Event",
+                    Description = "An opportuity for IT professionals " +
+                    "to meet, discuss ideas and meet their next boss or partner.",
+                    IsShow = false,
+                    ImageURL = "Networking.jpg",
+                    VideoURL = "NONE"
+                },
+                new Event
+                {
+                    EventID = 5,
+                    Name = "NHS Careers Fair",
+                    Description = "A prime opportunity for all professionals, both " +
+                    "potenial and current, to find their place in one of many " +
+                    "practices being represented on this day.",
+                    IsShow = false,
+                    ImageURL = "CareersFair.jpg",
+                    VideoURL = "NONE"
+                },
+                new Event
+                {
+                    EventID = 6,
+                    Name = "Jacob Laukaitis: Digital Nomads",
+                    Description = "Entrepreneur since 15, Jacob Laukaitis attends " +
+                    "the BCPA to give a talk about his experiences, his travels and " +
+                    "how you can become an explorior.",
+                    IsShow = true,
+                    ImageURL = "JacobLaukaitis.jpg",
+                    VideoURL = "NONE"
+                },
+                new Event
+                {
+                    EventID = 7,
+                    Name = "Richard III",
+                    Description = "After decades of civil war, the nation and the crown " +
+                    "hang in the balance. Enter Richard, Duke of Gloucester, to change the " +
+                    "course of history.",
+                    IsShow = true,
+                    ImageURL = "RichardIII.jpg",
+                    VideoURL = "NONE"
+                },
+                new Event
+                {
+                    EventID = 8,
+                    Name = "Jessie Cave: Sunrise",
+                    Description = "Stand-Up comedian Jessie Cave attends the BCPA with her critically " +
+                    "acclaimed blend of confessional comedy and DIY performance art to explain " +
+                    "how she is trying to get her personal life in order - before her kids wake up.",
+                    IsShow = true,
+                    ImageURL = "JessieCave.jpg",
+                    VideoURL = "NONE"
+                },
             };
 
             eventList.ForEach(s => context.Events.AddOrUpdate(p => p.EventID, s));
