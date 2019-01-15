@@ -119,7 +119,7 @@ namespace BCPA_OTS.Migrations
                     IsShow = true,
                     ImageURL = "JessieCave.jpg",
                     VideoURL = "NONE"
-                },
+                }
             };
 
             eventList.ForEach(s => context.Events.AddOrUpdate(p => p.EventID, s));
