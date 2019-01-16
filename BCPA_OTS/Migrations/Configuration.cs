@@ -41,7 +41,7 @@ namespace BCPA_OTS.Migrations
                     Description = "Poetry for people who don't like poetry, " +
                     "it’s loud, raucous, political, trivial, serious and very funny.",
                     IsShow = true,
-                    ImageURL = "Bang.jpg",
+                    ImageURL = "Bang.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
@@ -58,22 +58,22 @@ namespace BCPA_OTS.Migrations
                 new Event
                 {
                     EventID = 3,
-                    Name = "Frank Turner and The Sleeping Souls",
+                    Name = "Frank Turner",
                     Description = "Over 1000 shows since the inception " +
-                    "of the Sleeping Souls, Frank Turner brings his brand " +
+                    "of his band, The Sleeping Souls, Frank Turner brings his brand " +
                     "of punk-infused folk music to the BCPA.",
                     IsShow = true,
-                    ImageURL = "FrankTurner.jpg",
+                    ImageURL = "FrankTurner.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
                 {
                     EventID = 4,
-                    Name = "All Day IT Careers Networking Event",
+                    Name = "IT Careers Networking Event",
                     Description = "An opportuity for IT professionals " +
                     "to meet, discuss ideas and meet their next boss or partner.",
                     IsShow = false,
-                    ImageURL = "Networking.jpg",
+                    ImageURL = "Networking.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
@@ -84,18 +84,18 @@ namespace BCPA_OTS.Migrations
                     "potenial and current, to find their place in one of many " +
                     "practices being represented on this day.",
                     IsShow = false,
-                    ImageURL = "CareersFair.jpg",
+                    ImageURL = "CareersFair.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
                 {
                     EventID = 6,
-                    Name = "Jacob Laukaitis: Digital Nomads",
-                    Description = "Entrepreneur since 15, Jacob Laukaitis attends " +
-                    "the BCPA to give a talk about his experiences, his travels and " +
-                    "how you can become an explorior.",
+                    Name = "Jacob Laukaitis",
+                    Description = "Entrepreneur since 15 and self-declared digital nomad, " +
+                    "Jacob Laukaitis attends the BCPA to give a talk about his experiences, " +
+                    "his travels and how you can become an explorior.",
                     IsShow = true,
-                    ImageURL = "JacobLaukaitis.jpg",
+                    ImageURL = "JacobLaukaitis.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
@@ -106,7 +106,7 @@ namespace BCPA_OTS.Migrations
                     "hang in the balance. Enter Richard, Duke of Gloucester, to change the " +
                     "course of history.",
                     IsShow = true,
-                    ImageURL = "RichardIII.jpg",
+                    ImageURL = "RichardIII.JPG",
                     VideoURL = "NONE"
                 },
                 new Event
@@ -117,7 +117,7 @@ namespace BCPA_OTS.Migrations
                     "acclaimed blend of confessional comedy and DIY performance art to explain " +
                     "how she is trying to get her personal life in order - before her kids wake up.",
                     IsShow = true,
-                    ImageURL = "JessieCave.jpg",
+                    ImageURL = "JessieCave.JPG",
                     VideoURL = "NONE"
                 }
             };
