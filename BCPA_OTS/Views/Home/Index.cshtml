@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<BCPA_OTS.Models.Event>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "BCPA - Home";
 }
 
 <div class="jumbotron">
@@ -12,7 +12,7 @@
     <h2>@show.Name</h2>
     <p>@show.Description</p>
     <a href="~/Home/EventDetails/@show.EventID">
-        <img class="img-responsive" src="~/Images/@show.ImageURL" alt="Image of Show" />
+        <img class="img-responsive" src="~/Images/@show.ImageURL" alt="Image of Show" width ="250" height = "250" />
     </a>
 
 
