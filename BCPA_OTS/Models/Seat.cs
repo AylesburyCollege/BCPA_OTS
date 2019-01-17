@@ -33,6 +33,7 @@ namespace BCPA_OTS.Models
         /// side facing the back
         /// </summary>
         public int SeatNo { get; set; }
+
         /// <summary>
         /// A specification of seat that each one will 
         /// have. The types are: Orchestra, Stall and 
